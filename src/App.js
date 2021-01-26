@@ -50,15 +50,16 @@ function handleSubmit(e) {
         <label>Gender:</label>
       <div className="form-group">
         <input type="radio" name="gender" value="male" defaultChecked onChange={e => setGender(e.target.value)}/><label>Male</label>
-        <input type="radio" name="gender" value="female" onChange={e => setGender(e.target.value)}/><label>Female</label>
+        <input className="space" type="radio" name="gender" value="female" onChange={e => setGender(e.target.value)}/><label>Female</label>
       </div>
+      <hr className="col-6"></hr>
+
+      <button className="btn btn-primary mt-2 mb-4 rounded">Calculate</button>
 
       <div className="form-group">
         <label><h4>Alcohol in your blood:</h4></label> <br></br>
-        <output> <h4> {alcohol.toFixed(1)} </h4> </output>
+        <output> <h4> {alcohol.toFixed(2)} </h4> </output>
       </div>
-      
-      <button className="btn btn-primary mt-2 rounded">Calculate</button>
     </form>
     </div>
   );
